@@ -2,21 +2,25 @@ const Navbar = () => {
   const navItems = ["Products", "Projects", "About", "Contact"];
 
   return (
-    <nav className="w-full z-50 fixed flex justify-between h-14 backdrop-blur-md px-24 align-middle items-center text-green-800">
-      <a href="" className="flex gap-4 text-2xl items-center ">
-        <img className="h-9 drop-shadow-md" src="./images/greenhouse-logo.png" alt="green house logo" />
-        <div className="font-bold">Green House</div>
-      </a>
+    <nav className="w-full absolute z-50 p-14 text-green-950">
+      <div className="h-full flex justify-between align-middle items-center mx-auto px-8">
+        <a href="" className="flex gap-2 text-3xl items-center ">
+          <div className="bg-gray-100 size-16 rounded-full flex justify-center items-center shadow-md">
+            <img className="h-10" src="./images/greenhouse-logo.png" alt="green house logo" />
+          </div>
+          <div className="font-bold">Green House</div>
+        </a>
 
-      <ul className="flex gap-8 text-sm font-bold items-center">
-        {navItems.map((item) => {
-          return (
-            <li className="hover:scale-125 hover:text-orange-300 transition-all">
-              <a href="">{item}</a>
-            </li>
-          );
-        })}
-      </ul>
+        <ul className="flex gap-8 text-base font-bold items-center">
+          {navItems.map((item) => {
+            return (
+              <li className="hover:scale-125 hover:text-lime-600 transition-all">
+                <a href="">{item}</a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </nav>
   );
 };
