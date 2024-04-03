@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import BestSellers from "../components/home/BestSellers";
+import FeaturedCollague from "../components/home/FeaturedCollague";
 import HeroBanner from "../components/home/HeroBanner";
 import NewArrivals from "../components/home/NewArrivals";
 
@@ -11,6 +12,7 @@ const Home = () => {
         <HeroBanner />
         <NewArrivals />
         <BestSellers />
+        <FeaturedCollague />
       </main>
     </>
   );

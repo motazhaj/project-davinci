@@ -21,7 +21,7 @@ const ProductCard = ({ title, category, price, image }: productCardProps) => {
             <h2 className="truncate">{title}</h2>
             <FaRegHeart className="text-xl" />
           </div>
-          {category && <p className="truncate">{category}</p>}
+          {category && <p className="truncate text-gray-400">{category}</p>}
           {price && <p>₪ {price}</p>}
         </div>
       </a>
