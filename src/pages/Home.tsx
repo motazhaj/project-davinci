@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import BestSellers from "../components/home/BestSellers";
 import FeaturedCollague from "../components/home/FeaturedCollague";
@@ -14,6 +15,7 @@ const Home = () => {
         <BestSellers />
         <FeaturedCollague />
       </main>
+      <Footer />
     </>
   );
 };
