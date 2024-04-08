@@ -4,7 +4,7 @@ const ImageTitled = ({ title, image }: { title: string; image: string }) => {
       <div className="w-full h-full">
         <img className="z-0 w-full h-full object-cover shadow-xl" src={`/images/${image}`} alt="paintshop" />
       </div>
-      <div className="w-full h-40 absolute bottom-0 bg-gradient-to-t from-white/70 to-transparent">
+      <div className="w-full h-2/3 absolute bottom-0 bg-gradient-to-t from-white/70 to-transparent">
         <h1 className="absolute bottom-6 left-6 text-4xl font-bold text-lime-900 drop-shadow-xl">{title}</h1>
       </div>
     </div>
