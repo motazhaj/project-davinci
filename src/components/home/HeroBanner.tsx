@@ -5,7 +5,7 @@ const HeroBanner = () => {
     <section className=" h-[700px] relative overflow-hidden xl:rounded-[16px] xl:m-4">
       <div className="w-full h-full mx-auto">
         <img
-          className="z-0 w-full h-full object-cover shadow-xl absolute "
+          className="z-0 w-full h-full object-cover shadow-xl absolute"
           src="/images/herobanner.jpg"
           alt="paintshop"
         />

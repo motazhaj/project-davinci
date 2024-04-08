@@ -3,12 +3,10 @@ import { navItems } from "./Navbar";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-[300px] bg-lime-950 text-white p-8 mt-[128px]">
+    <footer className="w-full h-[300px] bg-gray-100 p-8 mt-[128px] shadow-inner">
       <div className="w-full h-full max-w-[1280px] flex justify-between items-start mx-auto">
         <Link to="/" className="flex gap-2 text-3xl items-center ">
-          <div className="size-16 flex justify-center items-center bg-white rounded-full">
-            <img className="h-11" src="./images/greenhouse-logo.png" alt="green house logo" />
-          </div>
+          <img className="h-11" src="./images/greenhouse-logo.png" alt="green house logo" />
           <div className="font-bold">Green House</div>
         </Link>
         <div>
@@ -23,7 +21,9 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="text-center">© {new Date().getFullYear()} Green House. All rights reserved</p>
+      <p className="text-center py-2 border-t border-lime-500">
+        © {new Date().getFullYear()} Green House. All rights reserved
+      </p>
     </footer>
   );
 };

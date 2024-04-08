@@ -13,7 +13,7 @@ const ProductCard = ({ id, title, category, price, image }: productCardProps) =>
   return (
     <li className="min-w-[230px] h-[340px]">
       <div className="w-full h-full flex flex-col gap-2">
-        <Link className="w-full h-full hover:scale-105 transition-transform" to={`/product/${id}`}>
+        <Link className="w-full h-full" to={`/product/${id}`}>
           <img
             className="h-full w-full object-cover rounded-xl shadow-lg"
             src={`./images/${image}`}
