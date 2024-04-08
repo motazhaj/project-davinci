@@ -2,14 +2,14 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const HeroBanner = () => {
   return (
-    <section className=" h-[700px] relative overflow-hidden rounded-[16px] m-4">
+    <section className=" h-[700px] relative overflow-hidden xl:rounded-[16px] xl:m-4">
       <div className="w-full h-full mx-auto">
         <img
           className="z-0 w-full h-full object-cover shadow-xl absolute "
           src="/images/herobanner.jpg"
           alt="paintshop"
         />
-        <div className="w-full h-full top-0 left-0 flex justify-center items-center max-w-[1400px] mx-auto">
+        <div className="w-full h-full top-0 left-0 flex justify-center items-center max-w-[1280px] mx-auto px-4">
           <div className="z-1 w-full h-2/3 text-lime-950 flex flex-col justify-end text-left drop-shadow-2xl">
             <div>
               <h1 className="text-6xl font-bold ">Welcome to Green House</h1>

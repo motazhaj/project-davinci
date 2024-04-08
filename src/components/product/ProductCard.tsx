@@ -9,10 +9,10 @@ interface productCardProps {
 
 const ProductCard = ({ title, category, price, image }: productCardProps) => {
   return (
-    <li className="min-w-[250px] h-[350px] overflow-hidden">
+    <li className="min-w-[230px] h-[340px] overflow-hidden">
       <a className="w-full h-full flex flex-col gap-2" href="">
         <img
-          className="h-[250px] w-full object-cover rounded-xl shadow-lg"
+          className="h-full w-full object-cover rounded-xl shadow-lg"
           src={`./images/${image}`}
           alt="test"
         />
