@@ -10,7 +10,7 @@ interface itemInterface {
 
 const NewArrivals = ({ list }: { list: itemInterface[] }) => {
   return (
-    <div className="relative max-w-[1400px] mx-auto">
+    <div className="relative w-screen max-w-[1400px] mx-auto px-4">
       <h1 className="text-3xl font-bold">New Arrivals</h1>
       <ul className="flex gap-4 justify-between mt-4 overflow-x-scroll">
         {list.map((item) => {

@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col gap-[64px] min-h-svh">
+      <main className="flex flex-col gap-[64px] min-h-svh w-screen">
         <HeroBanner />
         <NewArrivals list={newArrivals} />
         <Categories list={categories} />
