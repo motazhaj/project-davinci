@@ -17,6 +17,7 @@ const NewArrivals = ({ list }: { list: itemInterface[] }) => {
           return (
             <ProductCard
               key={item.id}
+              id={item.id}
               title={item.title}
               category={item.category}
               price={item.price}
