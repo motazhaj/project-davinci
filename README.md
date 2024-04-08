@@ -12,3 +12,16 @@ Functional
     - Features collague
     - Footer
 ```
+
+## Week 2
+
+Catalouge page
+  - Hero
+  - Filters Component
+  - Paginated List
+
+Product Details Page
+  - Image
+  - Title
+  - Category
+  - Price
