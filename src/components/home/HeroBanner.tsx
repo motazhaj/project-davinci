@@ -9,8 +9,8 @@ const HeroBanner = () => {
           src="/images/herobanner.jpg"
           alt="paintshop"
         />
-        <div className="w-full h-full top-0 left-0 flex justify-center items-center">
-          <div className="z-1 w-full h-2/3 text-lime-950 flex flex-col justify-end text-left drop-shadow-2xl px-14">
+        <div className="w-full h-full top-0 left-0 flex justify-center items-center max-w-[1400px] mx-auto">
+          <div className="z-1 w-full h-2/3 text-lime-950 flex flex-col justify-end text-left drop-shadow-2xl">
             <div>
               <h1 className="text-6xl font-bold ">Welcome to Green House</h1>
               <div className="text-2xl pt-4 font-bold">
