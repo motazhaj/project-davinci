@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Categories from "../components/home/Categories";
 import FeaturedCollague from "../components/home/FeaturedCollague";
 import HeroBanner from "../components/home/HeroBanner";
@@ -23,14 +21,10 @@ const categories = [
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <main className="flex flex-col gap-[64px] min-h-svh w-screen">
-        <HeroBanner />
-        <NewArrivals list={newArrivals} />
-        <Categories list={categories} />
-        <FeaturedCollague />
-      </main>
-      <Footer />
+      <HeroBanner />
+      <NewArrivals list={newArrivals} />
+      <Categories list={categories} />
+      <FeaturedCollague />
     </>
   );
 };
