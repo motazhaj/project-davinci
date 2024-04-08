@@ -16,12 +16,14 @@ Functional
 ## Week 2
 
 Catalouge page
-  - Hero
-  - Filters Component
-  - Paginated List
+
+- Hero
+- Filters Component
+- Infinite loading list
 
 Product Details Page
-  - Image
-  - Title
-  - Category
-  - Price
+
+- Image
+- Title
+- Category
+- Price
