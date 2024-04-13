@@ -17,7 +17,7 @@ const ProductCard = ({ id, title, category, price, image }: productCardProps) =>
           <div className="absolute w-full h-full transition-colors hover:bg-white/40 rounded-xl" />
           <img
             className="h-full w-full object-cover rounded-xl shadow-lg"
-            src={`./images/${image}`}
+            src={`/images/${image}`}
             alt="test"
           />
         </Link>

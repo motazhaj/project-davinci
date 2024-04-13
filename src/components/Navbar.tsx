@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="w-full absolute z-50 py-14 pb-0 text-green-950">
       <div className="h-full flex justify-between align-middle items-center max-w-screen-lg mx-auto px-4">
         <Link to="/" className="flex gap-2 text-3xl items-center ">
-          <img className="h-11" src="./images/greenhouse-logo.png" alt="green house logo" />
+          <img className="h-11" src="/images/greenhouse-logo.png" alt="green house logo" />
           <div className="font-bold">Green House</div>
         </Link>
 
