@@ -4,7 +4,7 @@ import { navItems } from "./Navbar";
 const Footer = () => {
   return (
     <footer className="w-full h-[300px] bg-gray-100 p-8 mt-[128px] shadow-inner">
-      <div className="w-full h-full max-w-[1280px] flex justify-between items-start mx-auto">
+      <div className="w-full h-full max-w-screen-lg flex justify-between items-start mx-auto">
         <Link to="/" className="flex gap-2 text-3xl items-center ">
           <img className="h-11" src="./images/greenhouse-logo.png" alt="green house logo" />
           <div className="font-bold">Green House</div>
