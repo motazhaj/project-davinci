@@ -27,3 +27,9 @@ Product Details Page
 - Title
 - Category
 - Price
+
+## Week 3
+
+Products page
+- Work on filtering logic on the products page
+- Link APIs scroll pagination logic
