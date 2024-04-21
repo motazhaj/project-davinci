@@ -10,11 +10,7 @@ const ProductGrid = ({ products, loading }: { products: productCardProps[]; load
           <LoadingSpinner />
         ) : (
           products.map((product) => {
-            return (
-              <ProductCard
-                product={product}
-              />
-            );
+            return <ProductCard key={product.id} product={product} />;
           })
         )}
       </ul>
