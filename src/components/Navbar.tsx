@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
 export const navItems = [
-  { id: 0, name: "Products", link: "/products" },
-  { id: 1, name: "Projects", link: "/projects" },
-  { id: 2, name: "About Us", link: "/about" },
-  { id: 3, name: "Contact Us", link: "/contact" },
+  { id: 0, name: "Categories", link: "/categories" },
+  { id: 1, name: "Products", link: "/products" },
+  { id: 2, name: "Projects", link: "/projects" },
+  { id: 3, name: "About Us", link: "/about" },
+  { id: 4, name: "Contact Us", link: "/contact" },
 ];
 
 const Navbar = () => {
