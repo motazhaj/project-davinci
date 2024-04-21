@@ -11,7 +11,7 @@ export interface productCardProps {
 
 const ProductCard = ({ id, title, category, price, image }: productCardProps) => {
   return (
-    <li className="min-w-[230px] h-[340px]">
+    <li className="min-w-[220px] min-h-[340px]">
       <div className="w-full h-full flex flex-col gap-2">
         <Link className="w-full h-full relative" to={`/product/${id}`}>
           <div className="absolute w-full h-full transition-colors hover:bg-white/40 rounded-xl" />
