@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 export interface productCardProps {
   id: number;
   title: string;
-  category?: string;
-  price?: string;
-  image: string;
+  category: string;
+  price: string;
+  image?: string;
 }
 
 const ProductCard = ({ product }: { product: productCardProps }) => {
@@ -18,7 +18,7 @@ const ProductCard = ({ product }: { product: productCardProps }) => {
           <div className="absolute w-full h-full transition-colors hover:bg-white/40 rounded-xl" />
           <img
             className="h-full w-full object-cover rounded-xl shadow-lg"
-            src={`/images/${image}`}
+            src={image ? image : "/images/img-placeholder.png"}
             alt="test"
           />
         </Link>
