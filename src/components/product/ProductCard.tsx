@@ -9,7 +9,8 @@ export interface productCardProps {
   image: string;
 }
 
-const ProductCard = ({ id, title, category, price, image }: productCardProps) => {
+const ProductCard = ({ product }: { product: productCardProps }) => {
+  const { id, title, category, price, image } = product;
   return (
     <li className="min-w-[220px] min-h-[340px]">
       <div className="w-full h-full flex flex-col gap-2">
