@@ -1,40 +1,38 @@
 import ProductCard from "../components/product/ProductCard";
 import FilterSection from "../components/filter/FilterSection";
-
-const products = [
-  { id: 0, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 1, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 2, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 3, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 4, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 5, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 6, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 7, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 8, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 9, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 10, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 11, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-];
-
-const sortOptions = [
-  { id: 0, title: "Best Selling", value: "best" },
-  { id: 1, title: "Alphabetically, A-Z", value: "a" },
-  { id: 2, title: "Alphabetically, Z-A", value: "z" },
-  { id: 3, title: "Price, low to high", value: "pricea" },
-  { id: 4, title: "Price, high to low", value: "pricez" },
-  { id: 5, title: "Date, old to new", value: "datea" },
-  { id: 6, title: "Date, new to old", value: "datez" },
-];
-
-const filterOptions = [
-  { id: 0, title: "Bag", value: "bag" },
-  { id: 1, title: "Notebook", value: "notebook" },
-  { id: 2, title: "Pencil", value: "pencil" },
-  { id: 3, title: "T-Shirt", value: "tshirt" },
-  { id: 4, title: "School Bag", value: "schoolbag" },
-];
+import { useEffect, useState } from "react";
+import { productCardProps } from "../components/product/ProductCard";
 
 const Products = () => {
+  const [products, setProducts] = useState<productCardProps[] | []>([]);
+  const [loading, setLoading] = useState(true);
+  const [filterOptions, setFilterOptions] = useState<string[] | []>([]);
+  const [sortOptions, setSortOptions] = useState<string[] | []>([]);
+
+  useEffect(() => {
+    fetch("/data/products.json").then((data) => {
+      data.json().then((data) => {
+        setProducts(data);
+        setLoading(false);
+      });
+    });
+
+    fetch("/data/filterOptions.json").then((data) => {
+      data.json().then((data) => {
+        setFilterOptions(data);
+      });
+    });
+
+    fetch("/data/sortOptions.json").then((data) => {
+      data.json().then((data) => {
+        setSortOptions(data);
+      });
+    });
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
   return (
     <>
       <FilterSection sortOptions={sortOptions} filterOptions={filterOptions} />

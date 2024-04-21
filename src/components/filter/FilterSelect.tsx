@@ -7,9 +7,9 @@ const FilterSelect = ({ title, options, onChange }: { title: string; options?: a
       <option value="">{title}</option>
 
       {options &&
-        options.map((option: any) => (
-          <option key={option.value} value={option.value}>
-            {option.title}
+        options.map((option: string[], index: number) => (
+          <option key={index} value={option}>
+            {option}
           </option>
         ))}
     </select>

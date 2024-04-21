@@ -1,0 +1,33 @@
+[
+  { "id": 0, "title": "Outdoor Bag XL", "category": "bag", "price": "39.99", "image": "outdoor-bag.jpg" },
+  { "id": 1, "title": "Outdoor Bag XL", "category": "utensil", "price": "39.99", "image": "outdoor-bag.jpg" },
+  { "id": 2, "title": "Outdoor Bag XL", "category": "gift", "price": "39.99", "image": "outdoor-bag.jpg" },
+  { "id": 3, "title": "Outdoor Bag XL", "category": "toy", "price": "39.99", "image": "outdoor-bag.jpg" },
+  {
+    "id": 4,
+    "title": "Outdoor Bag XL",
+    "category": "notebook",
+    "price": "39.99",
+    "image": "outdoor-bag.jpg"
+  },
+  { "id": 5, "title": "Outdoor Bag XL", "category": "book", "price": "39.99", "image": "outdoor-bag.jpg" },
+  { "id": 6, "title": "Outdoor Bag XL", "category": "art", "price": "39.99", "image": "outdoor-bag.jpg" },
+  {
+    "id": 7,
+    "title": "Outdoor Bag XL",
+    "category": "sketchbook",
+    "price": "39.99",
+    "image": "outdoor-bag.jpg"
+  },
+  { "id": 8, "title": "Outdoor Bag XL", "category": "sport", "price": "39.99", "image": "outdoor-bag.jpg" },
+  {
+    "id": 9,
+    "title": "Outdoor Bag XL",
+    "category": "lunch-box",
+    "price": "39.99",
+    "image": "outdoor-bag.jpg"
+  },
+  { "id": 10, "title": "Outdoor Bag XL", "category": "bottle", "price": "39.99", "image": "outdoor-bag.jpg" },
+  { "id": 11, "title": "Outdoor Bag XL", "category": "tool", "price": "39.99", "image": "outdoor-bag.jpg" },
+  { "id": 12, "title": "Outdoor Bag XL", "category": "art", "price": "39.99", "image": "outdoor-bag.jpg" }
+]

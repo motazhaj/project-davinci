@@ -1,7 +1,7 @@
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-interface productCardProps {
+export interface productCardProps {
   id: number;
   title: string;
   category?: string;
