@@ -1,3 +1,5 @@
+import makeTitleFromSlug from "../../utility/makeTitleFromSlug";
+
 const FilterSelect = ({ title, options, onChange }: { title: string; options?: any; onChange?: any }) => {
   return (
     <select
@@ -7,9 +9,9 @@ const FilterSelect = ({ title, options, onChange }: { title: string; options?: a
       <option value="">{title}</option>
 
       {options &&
-        options.map((option: string[], index: number) => (
+        options.map((option: string, index: number) => (
           <option key={index} value={option}>
-            {option}
+            {makeTitleFromSlug(option)}
           </option>
         ))}
     </select>
