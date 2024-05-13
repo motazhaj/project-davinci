@@ -4,18 +4,18 @@ import HeroBanner from "../components/home/HeroBanner";
 import NewArrivals from "../components/home/NewArrivals";
 
 const newArrivals = [
-  { id: 0, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 1, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 2, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 3, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
-  { id: 4, title: "Outdoor Bag XL", category: "School Bag", price: "39.99", image: "outdoor-bag.jpg" },
+  { id: 0, title: "Outdoor Bag XL", category: "School Bag", price: "39.99" },
+  { id: 1, title: "Outdoor Bag XL", category: "School Bag", price: "39.99" },
+  { id: 2, title: "Outdoor Bag XL", category: "School Bag", price: "39.99" },
+  { id: 3, title: "Outdoor Bag XL", category: "School Bag", price: "39.99" },
+  { id: 4, title: "Outdoor Bag XL", category: "School Bag", price: "39.99" },
 ];
 const categories = [
-  { id: 0, category: "Note Books", image: "notebooks.webp" },
-  { id: 1, category: "Note Books", image: "notebooks.webp" },
-  { id: 2, category: "Note Books", image: "notebooks.webp" },
-  { id: 3, category: "Note Books", image: "notebooks.webp" },
-  { id: 4, category: "Note Books", image: "notebooks.webp" },
+  { id: 0, title: "Note Books" },
+  { id: 1, title: "Note Books" },
+  { id: 2, title: "Note Books" },
+  { id: 3, title: "Note Books" },
+  { id: 4, title: "Note Books" },
 ];
 
 const Home = () => {
