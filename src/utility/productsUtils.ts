@@ -1,17 +1,20 @@
-import { productCardProps } from "../components/product/ProductCard";
-
-export function searchItems(products: productCardProps[], searchTerm: string) {
-  const searchTermLower = searchTerm.toLowerCase().trim();
-  const filteredItems = products.filter((item) => {
-    const titleLower = item.title.toLowerCase();
-    const categoryLower = item.category.toLowerCase();
-    return titleLower.includes(searchTermLower) || categoryLower.includes(searchTermLower);
-  });
-
-  return filteredItems;
+export interface productCardProps {
+  id: number;
+  title: string;
+  category: string;
+  price: string;
+  image?: string;
 }
 
-export const onFilter = async (search: string | null, filter: string | null, sort: string | null) => {
+export const onFilter = async (
+  search: string | null,
+  filter: string | null,
+  sort: string | null,
+  pageSize: number,
+  pageNumber: number
+) => {
+  console.log("onFilter", search, filter, sort, pageSize, pageNumber);
+  
   const response = await fetch("/data/products.json");
   const products = await response.json();
   let filteredResults = products;
@@ -25,8 +28,20 @@ export const onFilter = async (search: string | null, filter: string | null, sor
   if (sort) {
     filteredResults = sortItems(filteredResults, sort);
   }
+  filteredResults = paginateItems(filteredResults, pageSize, pageNumber);
   return filteredResults;
 };
+
+export function searchItems(products: productCardProps[], searchTerm: string) {
+  const searchTermLower = searchTerm.toLowerCase().trim();
+  const filteredItems = products.filter((item) => {
+    const titleLower = item.title.toLowerCase();
+    const categoryLower = item.category.toLowerCase();
+    return titleLower.includes(searchTermLower) || categoryLower.includes(searchTermLower);
+  });
+
+  return filteredItems;
+}
 
 const filterItems = (items: productCardProps[], filter: string) => {
   if (filter === "") {
@@ -52,4 +67,8 @@ const sortItems = (items: productCardProps[], sort: string) => {
   } else {
     return items;
   }
+};
+
+const paginateItems = (items: productCardProps[], pageSize: number, pageNumber: number) => {
+  return items.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
 };
