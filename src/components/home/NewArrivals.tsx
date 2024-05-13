@@ -1,4 +1,5 @@
-import ProductCard, { productCardProps } from "../product/ProductCard";
+import ProductCard from "../product/ProductCard";
+import { productCardProps } from "../../utility/productsUtils";
 
 const NewArrivals = ({ list }: { list: productCardProps[] }) => {
   return (
