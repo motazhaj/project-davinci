@@ -1,13 +1,6 @@
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-export interface productCardProps {
-  id: number;
-  title: string;
-  category: string;
-  price: string;
-  image?: string;
-}
+import { productCardProps } from "../../utility/productsUtils";
 
 const ProductCard = ({ product }: { product: productCardProps }) => {
   const { id, title, category, price, image } = product;

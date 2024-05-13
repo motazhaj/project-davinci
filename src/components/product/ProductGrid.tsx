@@ -1,6 +1,6 @@
 import LoadingSpinner from "../shared/LoadingSpinner";
 import ProductCard from "./ProductCard";
-import { productCardProps } from "./ProductCard";
+import { productCardProps } from "../../utility/productsUtils";
 
 const ProductGrid = ({ products, loading }: { products: productCardProps[]; loading: boolean }) => {
   return (
@@ -9,8 +9,8 @@ const ProductGrid = ({ products, loading }: { products: productCardProps[]; load
         {loading ? (
           <LoadingSpinner />
         ) : (
-          products.map((product) => {
-            return <ProductCard key={product.id} product={product} />;
+          products.map((product, index) => {
+            return <ProductCard key={index} product={product} />;
           })
         )}
       </ul>
