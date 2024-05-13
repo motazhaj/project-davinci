@@ -1,0 +1,128 @@
+[
+  {
+    "id": 0,
+    "title": "Spacious Weekender Bag",
+    "category": "Travel",
+    "price": 72.5
+  },
+  {
+    "id": 1,
+    "title": "Durable Hiking Backpack",
+    "category": "Hiking",
+    "price": 65.99
+  },
+  {
+    "id": 2,
+    "title": "Convertible Tote Bag",
+    "category": "Accessories",
+    "price": 58.0
+  },
+  {
+    "id": 3,
+    "title": "Colorful Kids' Backpack",
+    "category": "Kids",
+    "price": 54.75
+  },
+  {
+    "id": 4,
+    "title": "Professional Commuter Briefcase",
+    "category": "Business",
+    "price": 79.95
+  },
+  {
+    "id": 5,
+    "title": "Vintage Leather Satchel",
+    "category": "Fashion",
+    "price": 80.0
+  },
+  {
+    "id": 6,
+    "title": "Artist's Portfolio with Pockets",
+    "category": "Art Supplies",
+    "price": 62.25
+  },
+  {
+    "id": 7,
+    "title": "Insulated Lunch Cooler Bag",
+    "category": "Food & Drinks",
+    "price": 50.0
+  },
+  {
+    "id": 8,
+    "title": "Spacious Gym Duffel Bag",
+    "category": "Fitness",
+    "price": 68.5
+  },
+  {
+    "id": 9,
+    "title": "Reusable Grocery Shopping Bag",
+    "category": "Sustainable",
+    "price": 52.99
+  },
+  {
+    "id": 10,
+    "title": "Hydration Backpack with Bladder",
+    "category": "Outdoor",
+    "price": 75.0
+  },
+  {
+    "id": 11,
+    "title": "Adjustable Tool Belt with Pouches",
+    "category": "Hardware",
+    "price": 60.75
+  },
+  {
+    "id": 12,
+    "title": "Spiral-Bound Sketchbook Companion",
+    "category": "Art Supplies",
+    "price": 55.0
+  },
+  {
+    "id": 13,
+    "title": "Huggable Animal Plush Backpack",
+    "category": "Kids",
+    "price": 59.5
+  },
+  {
+    "id": 14,
+    "title": "Cotton Graphic T-Shirt",
+    "category": "Clothing",
+    "price": 23.0
+  },
+  {
+    "id": 15,
+    "title": "Cotton Graphic T-Shirt",
+    "category": "Clothing",
+    "price": 53.0
+  },
+  {
+    "id": 16,
+    "title": "Cotton Graphic T-Shirt",
+    "category": "Clothing",
+    "price": 10.0
+  },
+  {
+    "id": 17,
+    "title": "Cotton Graphic T-Shirt",
+    "category": "Clothing",
+    "price": 30.0
+  },
+  {
+    "id": 18,
+    "title": "Cotton Graphic T-Shirt",
+    "category": "Clothing",
+    "price": 520.0
+  },
+  {
+    "id": 19,
+    "title": "Cotton Graphic T-Shirt",
+    "category": "Clothing",
+    "price": 80.0
+  },
+  {
+    "id": 20,
+    "title": "Cotton Graphic T-Shirt",
+    "category": "Clothing",
+    "price": 20.0
+  }
+]
