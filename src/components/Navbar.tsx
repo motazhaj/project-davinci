@@ -21,7 +21,7 @@ const Navbar = () => {
           {navItems.map((item) => {
             return (
               <li key={item.id} className="hover:scale-125 hover:text-lime-600 transition-all">
-                <a href={item.link}>{item.name}</a>
+                <Link to={item.link}>{item.name}</Link>
               </li>
             );
           })}
