@@ -33,3 +33,10 @@ Product Details Page
 Products page
 - Work on filtering logic on the products page
 - Link APIs scroll pagination logic
+
+## Week 4
+
+- useReducer
+- State managmenet
+- Categories page
+- Backend
