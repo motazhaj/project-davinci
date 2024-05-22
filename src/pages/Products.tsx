@@ -23,7 +23,7 @@ const Products = () => {
         });
       })
       .catch((err) => {
-        console.log("FETCH ERROR", err);
+        console.warn("Failed to fetch products: ", err);
       })
       .finally(() => setLoading(false));
   }, [searchParams]);

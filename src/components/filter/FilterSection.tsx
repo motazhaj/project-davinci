@@ -12,7 +12,8 @@ const FilterSection = () => {
   useEffect(() => {
     fetch("http://localhost:5000/sort-options")
       .then((data) => data.json())
-      .then((data) => setFilterOptions(data));
+      .then((data) => setFilterOptions(data))
+      .catch((err) => console.warn("Failed to fetch filter options: ", err));
   }, []);
 
   return (
