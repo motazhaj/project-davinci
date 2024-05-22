@@ -13,9 +13,9 @@ const handleProducts = async (params) => {
   if (filter) {
     filteredResults = filterItems(filteredResults, filter);
   }
-  if (sort) {
-    filteredResults = sortItems(filteredResults, sort);
-  }
+
+  filteredResults = sortItems(filteredResults, sort);
+
   filteredResults = paginateItems(filteredResults, pageSize, pageNumber);
   return filteredResults;
 };
@@ -25,7 +25,9 @@ function searchItems(products, searchTerm) {
   const filteredItems = products.filter((item) => {
     const titleLower = item.title.toLowerCase();
     const categoryLower = item.category.toLowerCase();
-    return titleLower.includes(searchTermLower) || categoryLower.includes(searchTermLower);
+    return (
+      titleLower.includes(searchTermLower) || categoryLower.includes(searchTermLower)
+    );
   });
 
   return filteredItems;
@@ -40,10 +42,8 @@ const filterItems = (items, filter) => {
 };
 
 const sortItems = (items, sort) => {
-  if (sort === "newest") {
-    return items;
-  } else if (sort === "oldest") {
-    return items.reverse();
+  if (sort === "oldest") {
+    return items.sort((a, b) => parseInt(b.id) - parseInt(a.id));
   } else if (sort === "price-low-to-high") {
     return items.sort((a, b) => parseInt(a.price) - parseInt(b.price));
   } else if (sort === "price-high-to-low") {
@@ -53,7 +53,7 @@ const sortItems = (items, sort) => {
   } else if (sort === "z-to-a") {
     return items.sort((a, b) => b.title.localeCompare(a.title));
   } else {
-    return items;
+    return items.sort((a, b) => parseInt(a.id) - parseInt(b.id));
   }
 };
 
