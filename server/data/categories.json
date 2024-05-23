@@ -1,7 +1,27 @@
 [
-  { "id": 1, "slug": "clothing", "image": "" },
-  { "id": 2, "slug": "fashion", "image": "" },
-  { "id": 3, "slug": "outdoor", "image": "" },
-  { "id": 4, "slug": "travel", "image": "" },
-  { "id": 5, "slug": "hiking", "image": "" }
+  {
+    "id": 1,
+    "slug": "clothing",
+    "image": "https://image.made-in-china.com/202f0j00JYTcGRzdvfqr/4PCS-Canvas-Backpack-Combo-Set-School-Bags-with-Pencil-Bag-Casual-School-Bag-for-Teenagers-Handbag-College-Student-Laptop-Backpacks.webp"
+  },
+  {
+    "id": 2,
+    "slug": "fashion",
+    "image": "https://image.made-in-china.com/202f0j00JYTcGRzdvfqr/4PCS-Canvas-Backpack-Combo-Set-School-Bags-with-Pencil-Bag-Casual-School-Bag-for-Teenagers-Handbag-College-Student-Laptop-Backpacks.webp"
+  },
+  {
+    "id": 3,
+    "slug": "outdoor",
+    "image": "https://image.made-in-china.com/202f0j00JYTcGRzdvfqr/4PCS-Canvas-Backpack-Combo-Set-School-Bags-with-Pencil-Bag-Casual-School-Bag-for-Teenagers-Handbag-College-Student-Laptop-Backpacks.webp"
+  },
+  {
+    "id": 4,
+    "slug": "travel",
+    "image": "https://image.made-in-china.com/202f0j00JYTcGRzdvfqr/4PCS-Canvas-Backpack-Combo-Set-School-Bags-with-Pencil-Bag-Casual-School-Bag-for-Teenagers-Handbag-College-Student-Laptop-Backpacks.webp"
+  },
+  {
+    "id": 5,
+    "slug": "hiking",
+    "image": "https://image.made-in-china.com/202f0j00JYTcGRzdvfqr/4PCS-Canvas-Backpack-Combo-Set-School-Bags-with-Pencil-Bag-Casual-School-Bag-for-Teenagers-Handbag-College-Student-Laptop-Backpacks.webp"
+  }
 ]
