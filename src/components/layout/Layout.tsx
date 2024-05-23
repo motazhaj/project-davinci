@@ -1,12 +1,12 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col gap-[64px] min-h-svh w-screen">
+      <main className="flex flex-col gap-16 min-h-svh w-screen">
         <Outlet />
       </main>
       <Footer />

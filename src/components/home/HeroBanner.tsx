@@ -2,7 +2,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const HeroBanner = () => {
   return (
-    <section className=" h-[700px] relative overflow-hidden xl:rounded-[16px] xl:m-4">
+    <section className=" h-[700px] relative -top-24 overflow-hidden xl:rounded-[16px] xl:m-4">
       <div className="w-full h-full mx-auto">
         <img
           className="z-0 w-full h-full object-cover shadow-xl absolute"

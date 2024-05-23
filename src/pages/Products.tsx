@@ -30,9 +30,11 @@ const Products = () => {
 
   return (
     <>
-      <FilterSection />
-      <ProductGrid products={products} loading={loading} />
-      <Pagination />
+      <div className="flex flex-col gap-16 relative -top-24">
+        <FilterSection />
+        <ProductGrid products={products} loading={loading} />
+        <Pagination />
+      </div>
     </>
   );
 };
