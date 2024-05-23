@@ -1,4 +1,5 @@
 const products = require("./data/products.json");
+const categories = require("./data/categories.json");
 
 const handleProducts = async (params) => {
   let { search, filter, sort, pageSize, pageNumber } = params;
@@ -18,6 +19,20 @@ const handleProducts = async (params) => {
 
   filteredResults = paginateItems(filteredResults, pageSize, pageNumber);
   return filteredResults;
+};
+
+const getCategories = async () => {
+  return categories;
+};
+
+const getNewArrivals = async () => {
+  return sortItems(products, "newest").slice(0, 8);
+};
+
+module.exports = {
+  handleProducts,
+  getCategories,
+  getNewArrivals,
 };
 
 function searchItems(products, searchTerm) {
@@ -59,8 +74,4 @@ const sortItems = (items, sort) => {
 
 const paginateItems = (items, pageSize, pageNumber) => {
   return items.slice((pageNumber - 1) * pageSize, pageNumber * pageSize);
-};
-
-module.exports = {
-  handleProducts,
 };

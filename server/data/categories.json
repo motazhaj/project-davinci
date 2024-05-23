@@ -1,0 +1,7 @@
+[
+  { "id": 1, "slug": "clothing", "image": "" },
+  { "id": 2, "slug": "fashion", "image": "" },
+  { "id": 3, "slug": "outdoor", "image": "" },
+  { "id": 4, "slug": "travel", "image": "" },
+  { "id": 5, "slug": "hiking", "image": "" }
+]
