@@ -5,12 +5,12 @@ import { productCardProps } from "../../utility/productsUtils";
 const ProductCard = ({ product }: { product: productCardProps }) => {
   const { id, title, category, price, image } = product;
   return (
-    <li className="min-w-[220px] min-h-[340px]">
+    <li className="min-w-[240px] min-h-[340px]">
       <div className="w-full h-full flex flex-col gap-2">
         <Link className="w-full h-full relative" to={`/product/${id}`}>
           <div className="absolute w-full h-full transition-colors hover:bg-white/40 rounded-xl" />
           <img
-            className="h-full w-full object-cover rounded-xl shadow-lg"
+            className="size-[240px] object-cover rounded-xl shadow-lg"
             src={image ? image : "/images/img-placeholder.png"}
             alt="test"
           />
