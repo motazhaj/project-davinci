@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import makeTitleFromSlug from "../../utility/makeTitleFromSlug";
+import HoverHighlight from "../shared/HoverHighlight";
 
 export interface categoryInterface {
   id: number;
@@ -12,6 +13,7 @@ const ProductCard = ({ category }: { category: categoryInterface }) => {
   return (
     <li className="min-w-[230px] h-[240px] overflow-hidden relative rounded-xl ">
       <Link to={`/products?filter=${slug}`} className="w-full h-full flex flex-col gap-2">
+        <HoverHighlight />
         <img
           className="h-full w-full object-cover"
           src={image ? image : "/images/img-placeholder.png"}

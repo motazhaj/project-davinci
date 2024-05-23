@@ -1,6 +1,7 @@
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { productCardProps } from "../../utility/productsUtils";
+import HoverHighlight from "../shared/HoverHighlight";
 
 const ProductCard = ({ product }: { product: productCardProps }) => {
   const { id, title, category, price, image } = product;
@@ -8,7 +9,7 @@ const ProductCard = ({ product }: { product: productCardProps }) => {
     <li className="min-w-[240px] min-h-[340px]">
       <div className="w-full h-full flex flex-col gap-2">
         <Link className="w-full h-full relative" to={`/product/${id}`}>
-          <div className="absolute w-full h-full transition-colors hover:bg-white/40 rounded-xl" />
+          <HoverHighlight />
           <img
             className="size-[240px] object-cover rounded-xl shadow-lg"
             src={image ? image : "/images/img-placeholder.png"}
