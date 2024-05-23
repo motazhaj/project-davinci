@@ -15,12 +15,12 @@ const Categories = () => {
       .catch((err) => console.warn("Failed to fetch filter options: ", err))
       .finally(() => setLoading(false));
   }, []);
-  
+
   return (
     <section>
       <div className="relative w-screen max-w-screen-lg mx-auto mt-16">
         <h1 className="text-3xl font-bold px-4">Categories</h1>
-        <ul className="grid gap-4 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 mt-16">
+        <ul className="grid gap-8 grid-cols-1  md:grid-cols-2 lg:grid-cols-3 mt-16">
           {loading ? (
             <LoadingSpinner />
           ) : (
