@@ -5,14 +5,25 @@ import { useEffect, useState } from "react";
 
 const FilterSection = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [filterOptions, setFilterOptions] = useState<{ sortValues: string[]; filterValues: string[] } | null>(
-    null
-  );
+  const [filterOptions, setFilterOptions] = useState<string[] | []>([]);
+  const sortOptions = [
+    "newest",
+    "oldest",
+    "price-low-to-high",
+    "price-high-to-low",
+    "a-to-z",
+    "z-to-a",
+  ];
 
   useEffect(() => {
-    fetch("http://localhost:5000/sort-options")
+    fetch("http://localhost:5000/categories")
       .then((data) => data.json())
-      .then((data) => setFilterOptions(data))
+      .then((data) => {
+        const categories = data.map((item: any) => {
+          return item.slug;
+        });
+        setFilterOptions(categories);
+      })
       .catch((err) => console.warn("Failed to fetch filter options: ", err));
   }, []);
 
@@ -30,7 +41,7 @@ const FilterSection = () => {
 
         <FilterSelect
           title={"Sort By:"}
-          options={filterOptions?.sortValues || []}
+          options={sortOptions}
           searchParams={searchParams.get("sort")}
           onChange={(e: any) => {
             searchParams.set("sort", e.target.value);
@@ -41,7 +52,7 @@ const FilterSection = () => {
 
         <FilterSelect
           title={"Filter By:"}
-          options={filterOptions?.filterValues || []}
+          options={filterOptions}
           searchParams={searchParams.get("filter")}
           onChange={(e: any) => {
             searchParams.set("filter", e.target.value);
