@@ -15,6 +15,7 @@ Functional
 
 ## Week 2
 
+```
 Catalouge page
 
 - Hero ✅
@@ -27,17 +28,30 @@ Product Details Page
 - Title ✅
 - Category ✅
 - Price ✅
+```
 
 ## Week 3
 
+```
 Products page
 
 - Work on filtering logic on the products page ✅
 - Link APIs scroll pagination logic 🔃
+```
 
 ## Week 4
 
+```
 - useReducer 🔃
 - State managmenet using search params ✅
 - Categories page ✅
 - Backend ✅
+```
+
+## Week 5
+
+```
+- Favourites
+- Cart
+- Refactor Products details
+```
