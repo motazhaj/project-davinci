@@ -3,17 +3,10 @@ import FilterSelect from "./FilterSelect";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+const sortOptions = ["newest", "oldest", "price-low-to-high", "price-high-to-low", "a-to-z", "z-to-a"];
 const FilterSection = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [filterOptions, setFilterOptions] = useState<string[] | []>([]);
-  const sortOptions = [
-    "newest",
-    "oldest",
-    "price-low-to-high",
-    "price-high-to-low",
-    "a-to-z",
-    "z-to-a",
-  ];
 
   useEffect(() => {
     fetch("http://localhost:5000/categories")
@@ -33,7 +26,7 @@ const FilterSection = () => {
         <InputField
           searchParams={searchParams.get("search") || ""}
           onChange={(e: any) => {
-            searchParams.set("search", e.target.value);
+            searchParams.set("search", e.target.value); // move to function for cleaner code
             searchParams.set("pageNumber", "1");
             setSearchParams(searchParams);
           }}
@@ -44,7 +37,7 @@ const FilterSection = () => {
           options={sortOptions}
           searchParams={searchParams.get("sort")}
           onChange={(e: any) => {
-            searchParams.set("sort", e.target.value);
+            searchParams.set("sort", e.target.value); // move to function for cleaner code
             searchParams.set("pageNumber", "1");
             setSearchParams(searchParams);
           }}
