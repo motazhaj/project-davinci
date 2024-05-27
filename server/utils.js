@@ -21,6 +21,14 @@ const handleProducts = async (params) => {
   return filteredResults;
 };
 
+const getProductById = async (id) => {
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].id === Number(id)) {
+      return products[i];
+    }
+  }
+};
+
 const getCategories = async () => {
   return categories;
 };
@@ -33,6 +41,7 @@ module.exports = {
   handleProducts,
   getCategories,
   getNewArrivals,
+  getProductById,
 };
 
 function searchItems(products, searchTerm) {

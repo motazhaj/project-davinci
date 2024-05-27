@@ -1,7 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 
-const { handleProducts, getNewArrivals, getCategories } = require("./utils");
+const {
+  handleProducts,
+  getNewArrivals,
+  getCategories,
+  getProductById,
+} = require("./utils");
 
 const app = express();
 
@@ -10,6 +15,12 @@ app.use(cors());
 app.get("/products", async (req, res) => {
   const products = await handleProducts(req.query);
   res.status(200).json(products);
+});
+
+app.get("/products/:id", async (req, res) => {
+  const product = await getProductById(req.params.id);
+  console.log(product);
+  res.status(200).json(product);
 });
 
 app.get("/new-arrivals", async (req, res) => {
