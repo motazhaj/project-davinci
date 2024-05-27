@@ -2,6 +2,7 @@
   {
     "id": 0,
     "title": "Spacious Weekender Bag",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Travel",
     "price": 72.5,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -9,6 +10,7 @@
   {
     "id": 1,
     "title": "Durable Hiking Backpack",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Hiking",
     "price": 65.99,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -16,6 +18,7 @@
   {
     "id": 2,
     "title": "Convertible Tote Bag",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Accessories",
     "price": 58.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -23,6 +26,7 @@
   {
     "id": 3,
     "title": "Colorful Kids' Backpack",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Kids",
     "price": 54.75,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -30,6 +34,7 @@
   {
     "id": 4,
     "title": "Professional Commuter Briefcase",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Business",
     "price": 79.95,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -37,6 +42,7 @@
   {
     "id": 5,
     "title": "Vintage Leather Satchel",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Fashion",
     "price": 80.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -44,6 +50,7 @@
   {
     "id": 6,
     "title": "Artist's Portfolio with Pockets",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Art Supplies",
     "price": 62.25,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -51,6 +58,7 @@
   {
     "id": 7,
     "title": "Insulated Lunch Cooler Bag",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Food & Drinks",
     "price": 50.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -58,6 +66,7 @@
   {
     "id": 8,
     "title": "Spacious Gym Duffel Bag",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Fitness",
     "price": 68.5,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -65,6 +74,7 @@
   {
     "id": 9,
     "title": "Reusable Grocery Shopping Bag",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Sustainable",
     "price": 52.99,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -72,6 +82,7 @@
   {
     "id": 10,
     "title": "Hydration Backpack with Bladder",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Outdoor",
     "price": 75.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -79,6 +90,7 @@
   {
     "id": 11,
     "title": "Adjustable Tool Belt with Pouches",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Hardware",
     "price": 60.75,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -86,6 +98,7 @@
   {
     "id": 12,
     "title": "Spiral-Bound Sketchbook Companion",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Art Supplies",
     "price": 55.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -93,6 +106,7 @@
   {
     "id": 13,
     "title": "Huggable Animal Plush Backpack",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Kids",
     "price": 59.5,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -100,6 +114,7 @@
   {
     "id": 14,
     "title": "Cotton Graphic T-Shirt",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Clothing",
     "price": 23.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -107,6 +122,7 @@
   {
     "id": 15,
     "title": "Cotton Graphic T-Shirt",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Clothing",
     "price": 53.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -114,6 +130,7 @@
   {
     "id": 16,
     "title": "Cotton Graphic T-Shirt",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Clothing",
     "price": 10.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -121,6 +138,7 @@
   {
     "id": 17,
     "title": "Cotton Graphic T-Shirt",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Clothing",
     "price": 30.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -128,6 +146,7 @@
   {
     "id": 18,
     "title": "Cotton Graphic T-Shirt",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Clothing",
     "price": 520.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -135,6 +154,7 @@
   {
     "id": 19,
     "title": "Cotton Graphic T-Shirt",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Clothing",
     "price": 80.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
@@ -142,6 +162,7 @@
   {
     "id": 20,
     "title": "Cotton Graphic T-Shirt",
+    "description": "Spacious Weekender Bag for all your travel needs.",
     "category": "Clothing",
     "price": 20.0,
     "image": "https://m.media-amazon.com/images/I/61EJbZoH5uL._AC_UY1100_.jpg"
