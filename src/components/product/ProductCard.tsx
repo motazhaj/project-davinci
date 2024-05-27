@@ -1,9 +1,9 @@
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { productCardProps } from "../../utility/productsUtils";
+import { productInterface } from "../../utility/productsUtils";
 import HoverHighlight from "../shared/HoverHighlight";
 
-const ProductCard = ({ product }: { product: productCardProps }) => {
+const ProductCard = ({ product }: { product: productInterface }) => {
   const { id, title, category, price, image } = product;
   return (
     <li className="min-w-[240px] min-h-[340px]">

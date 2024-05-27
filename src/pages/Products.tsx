@@ -1,12 +1,12 @@
 import FilterSection from "../components/filter/FilterSection";
 import { useEffect, useState } from "react";
-import { productCardProps } from "../utility/productsUtils";
+import { productInterface } from "../utility/productsUtils";
 import ProductGrid from "../components/product/ProductGrid";
 import { useSearchParams } from "react-router-dom";
 import Pagination from "../components/filter/Pagination";
 
 const Products = () => {
-  const [products, setProducts] = useState<productCardProps[] | []>([]);
+  const [products, setProducts] = useState<productInterface[] | []>([]);
   const [loading, setLoading] = useState(true);
   const [searchParams] = useSearchParams();
 
