@@ -2,12 +2,8 @@ import { productInterface } from "../../utility/productsUtils";
 
 const ProductImageReview = ({ product }: { product: productInterface }) => {
   return (
-    <div className="w-1/2 rounded-xl overflow-hidden shadow-lg">
-      <img
-        src="/images/outdoor-bag.jpg"
-        alt={product.title}
-        className="h-full w-full object-cover"
-      />
+    <div className="size-[350px] md:size-[600px] rounded-xl overflow-hidden shadow-lg">
+      <img src={product.image} alt={product.title} className="size-full object-cover" />
     </div>
   );
 };
