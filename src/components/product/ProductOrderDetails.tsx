@@ -2,8 +2,16 @@ import { IoCart } from "react-icons/io5";
 import ButtonPrimary from "../shared/buttons/ButtonPrimary";
 import { FaRegHeart } from "react-icons/fa";
 import { productInterface } from "../../utility/productsUtils";
+import { useState } from "react";
+import { cartInterface } from "../../utility/cartUtils";
 
 const ProductOrderDetails = ({ product }: { product: productInterface }) => {
+  const [cartItems, setCartItems] = useState<cartInterface[] | []>(
+    localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : []
+  );
+
+  console.log(cartItems);
+
   return (
     <div className="flex flex-col gap-4 w-1/2 p-8">
       <h1 className="text-3xl font-bold">{product.title}</h1>
@@ -21,7 +29,13 @@ const ProductOrderDetails = ({ product }: { product: productInterface }) => {
         />
       </div>
       <div className="w-full flex gap-4 pt-10">
-        <ButtonPrimary title="Add to Cart" onClick={() => console.log("Add to Cart")}>
+        <ButtonPrimary
+          title="Add to Cart"
+          onClick={() => {
+            setCartItems([...cartItems, product]);
+            localStorage.setItem("cartItems", JSON.stringify([...cartItems, product]));
+          }}
+        >
           <IoCart size={24} />
         </ButtonPrimary>
 
