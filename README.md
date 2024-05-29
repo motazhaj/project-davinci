@@ -53,5 +53,5 @@ Products page
 ```
 - Favourites
 - Cart
-- Refactor Products details
+- Refactor Products details ✅
 ```
