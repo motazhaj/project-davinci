@@ -8,8 +8,6 @@ const ProductDetails = () => {
   const params = useParams();
 
   useEffect(() => {
-    console.log(`http://localhost:5000/products/${params.id}`);
-
     fetch(`http://localhost:5000/products/${params.id}`).then((data) =>
       data.json().then((data) => setProduct(data))
     );
