@@ -13,7 +13,7 @@ const FilterSelect = ({
 }) => {
   return (
     <select
-      className=" shadow-md flex-grow h-10 rounded-full px-4 bg-gray-200 border-none focus:outline outline-lime-500"
+      className=" shadow-md flex-grow h-10 rounded-full px-4 bg-gray-200 border-none focus:outline outline-primary"
       onChange={onChange}
       value={searchParams || undefined}
     >

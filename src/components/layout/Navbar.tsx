@@ -27,7 +27,7 @@ const Navbar = () => {
               return (
                 <li
                   key={item.id}
-                  className="hover:scale-125 hover:text-lime-600 transition-all"
+                  className="hover:scale-125 hover:text-primary transition-all"
                 >
                   <Link to={item.link}>{item.name}</Link>
                 </li>
@@ -35,7 +35,7 @@ const Navbar = () => {
             })}
           </ul>
           <ul className="flex gap-6 justify-end text-base font-bold items-center">
-            <li className="hover:scale-125 hover:text-lime-600 transition-all">
+            <li className="hover:scale-125 hover:text-primary transition-all">
               <Link to={"/cart"}>
                 <FaShoppingCart className="text-xl" />
               </Link>

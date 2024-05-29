@@ -14,7 +14,7 @@ const ProductOrderDetails = ({ product }: { product: productInterface }) => {
       <div className="flex gap-8 items-center">
         <p className="text-xl font-semibold">Quantity</p>
         <input
-          className="bg-slate-200 rounded-lg p-2 text-center w-24 focus:outline outline-lime-500"
+          className="bg-slate-200 rounded-lg p-2 text-center w-24 focus:outline outline-primary"
           type="number"
           placeholder="1"
           step={1}
