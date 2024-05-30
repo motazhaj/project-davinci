@@ -52,6 +52,6 @@ Products page
 
 ```
 - Favourites
-- Cart
+- Cart Logic ✅
 - Refactor Products details ✅
 ```
