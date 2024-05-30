@@ -13,6 +13,15 @@ export function setLocalCart(cartItems: cartItemInterface[]) {
   localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
 
+export function getInvoice(): number {
+  const cart = getLocalCart();
+  let total = 0;
+  for (let i = 0; i < cart.length; i++) {
+    total += cart[i].totalPrice;
+  }
+  return total;
+}
+
 export function addCartItem(product: productInterface, quantity: number) {
   const cartItems = getLocalCart();
   if (isItemInCart(cartItems, product.id)) {
@@ -32,7 +41,7 @@ export function getItemQuantity(id: number) {
       return cart[i].quantity;
     }
   }
-  return 0;
+  return 1;
 }
 
 export function setItemQuantity(id: number, quantity: number) {
@@ -42,7 +51,7 @@ export function setItemQuantity(id: number, quantity: number) {
   }
   setLocalCart(
     cart.map((item: cartItemInterface) =>
-      item.id === id ? { ...item, quantity: quantity, totalPrice: quantity * item.price } : item
+      item.id === id ? { ...item, quantity: quantity, totalPrice: item.price * quantity } : item
     )
   );
 }
