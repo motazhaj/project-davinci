@@ -6,3 +6,7 @@ export interface productInterface {
   image?: string;
   description?: string;
 }
+
+export function formatNumber(number: number) {
+  return (Math.round(number * 100) / 100).toFixed(2);
+}
