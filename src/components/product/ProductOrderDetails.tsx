@@ -3,17 +3,33 @@ import ButtonPrimary from "../shared/buttons/ButtonPrimary";
 import { FaRegHeart } from "react-icons/fa";
 import { productInterface } from "../../utility/productsUtils";
 import { useEffect, useState } from "react";
-import { addCartItem, cartItemInterface, getLocalCart, isItemInCart, removeCartItem } from "../../utility/cartUtils";
+import {
+  addCartItem,
+  cartItemInterface,
+  getItemQuantity,
+  getLocalCart,
+  isItemInCart,
+  removeCartItem,
+  setItemQuantity,
+} from "../../utility/cartUtils";
 
 const ProductOrderDetails = ({ product }: { product: productInterface }) => {
   const [cartItems, setCartItems] = useState<cartItemInterface[] | []>(getLocalCart());
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(getItemQuantity(product.id));
   const [isInCart, setIsInCart] = useState(false);
 
   useEffect(() => {
     setIsInCart(isItemInCart(cartItems, product.id));
   }, [cartItems]);
-  console.log(cartItems);
+
+  useEffect(() => {
+    if (isInCart) {
+      setItemQuantity(product.id, quantity);
+      setCartItems(getLocalCart());
+    }
+  }, [quantity]);
+
+  console.log("Cart \n" + JSON.stringify(cartItems, null, 2));
 
   return (
     <div className="flex flex-col gap-4 w-1/2 p-8">
@@ -27,8 +43,10 @@ const ProductOrderDetails = ({ product }: { product: productInterface }) => {
         <input
           className="bg-slate-200 rounded-lg p-2 text-center w-24 focus:outline outline-primary"
           type="number"
-          placeholder={quantity.toString()}
-          onChange={(e) => setQuantity(Number(e.target.value))}
+          value={quantity}
+          onChange={(e) => {
+            setQuantity(Number(e.target.value));
+          }}
           step={1}
         />
       </div>
