@@ -2,14 +2,17 @@ import { IoCart } from "react-icons/io5";
 import ButtonPrimary from "../shared/buttons/ButtonPrimary";
 import { FaRegHeart } from "react-icons/fa";
 import { productInterface } from "../../utility/productsUtils";
-import { useState } from "react";
-import { cartInterface } from "../../utility/cartUtils";
+import { useEffect, useState } from "react";
+import { addCartItem, cartItemInterface, getLocalCart, isItemInCart, removeCartItem } from "../../utility/cartUtils";
 
 const ProductOrderDetails = ({ product }: { product: productInterface }) => {
-  const [cartItems, setCartItems] = useState<cartInterface[] | []>(
-    localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : []
-  );
+  const [cartItems, setCartItems] = useState<cartItemInterface[] | []>(getLocalCart());
+  const [quantity, setQuantity] = useState(1);
+  const [isInCart, setIsInCart] = useState(false);
 
+  useEffect(() => {
+    setIsInCart(isItemInCart(cartItems, product.id));
+  }, [cartItems]);
   console.log(cartItems);
 
   return (
@@ -24,16 +27,17 @@ const ProductOrderDetails = ({ product }: { product: productInterface }) => {
         <input
           className="bg-slate-200 rounded-lg p-2 text-center w-24 focus:outline outline-primary"
           type="number"
-          placeholder="1"
+          placeholder={quantity.toString()}
+          onChange={(e) => setQuantity(Number(e.target.value))}
           step={1}
         />
       </div>
       <div className="w-full flex gap-4 pt-10">
         <ButtonPrimary
-          title="Add to Cart"
+          title={isInCart ? "Remove from cart" : "Add to cart"}
           onClick={() => {
-            setCartItems([...cartItems, product]);
-            localStorage.setItem("cartItems", JSON.stringify([...cartItems, product]));
+            isInCart ? removeCartItem(product.id) : addCartItem(product, quantity);
+            setCartItems(getLocalCart());
           }}
         >
           <IoCart size={24} />
