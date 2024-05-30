@@ -24,6 +24,29 @@ export function addCartItem(product: productInterface, quantity: number) {
   setLocalCart([...cartItems, newItem]);
 }
 
+export function getItemQuantity(id: number) {
+  const cart = getLocalCart();
+
+  for (let i = 0; i < cart.length; i++) {
+    if (cart[i].id === id) {
+      return cart[i].quantity;
+    }
+  }
+  return 0;
+}
+
+export function setItemQuantity(id: number, quantity: number) {
+  const cart = getLocalCart();
+  if (quantity < 1) {
+    quantity = 1;
+  }
+  setLocalCart(
+    cart.map((item: cartItemInterface) =>
+      item.id === id ? { ...item, quantity: quantity, totalPrice: quantity * item.price } : item
+    )
+  );
+}
+
 export function removeCartItem(id: number) {
   const cartItems = getLocalCart();
   setLocalCart(cartItems.filter((item: cartItemInterface) => item.id !== id));
