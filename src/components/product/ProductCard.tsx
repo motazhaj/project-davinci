@@ -24,7 +24,7 @@ const ProductCard = ({ product }: { product: productInterface }) => {
             </button>
           </div>
           {category && <p className="truncate text-gray-400">{category}</p>}
-          {price && <p>₪ {formatNumber(price)}</p>}
+          {price && <p>₪{formatNumber(price)}</p>}
         </div>
       </div>
     </li>
