@@ -14,12 +14,12 @@ const Footer = () => {
           <div className="font-bold">Green House</div>
         </Link>
         <div>
-          <ul className="flex flex-col gap-4 text-base font-bold items-end pr-2 border-r border-lime-500">
+          <ul className="flex flex-col gap-4 text-base font-bold items-end pr-2 border-r border-primary">
             {navItems.map((item) => {
               return (
                 <li
                   key={item.id}
-                  className="hover:scale-125 hover:text-lime-600 transition-all"
+                  className="hover:scale-125 hover:text-primary transition-all"
                 >
                   <Link to={item.link}>{item.name}</Link>
                 </li>
@@ -28,7 +28,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="text-center pt-1 border-t border-lime-500">
+      <p className="text-center pt-1 border-t border-primary">
         © {new Date().getFullYear()} Green House. All rights reserved
       </p>
     </footer>

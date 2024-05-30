@@ -1,6 +1,6 @@
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { productInterface } from "../../utility/productsUtils";
+import { formatNumber, productInterface } from "../../utility/productsUtils";
 import HoverHighlight from "../shared/HoverHighlight";
 
 const ProductCard = ({ product }: { product: productInterface }) => {
@@ -24,7 +24,7 @@ const ProductCard = ({ product }: { product: productInterface }) => {
             </button>
           </div>
           {category && <p className="truncate text-gray-400">{category}</p>}
-          {price && <p>₪ {price}</p>}
+          {price && <p>₪{formatNumber(price)}</p>}
         </div>
       </div>
     </li>

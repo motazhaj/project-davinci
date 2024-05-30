@@ -25,7 +25,7 @@ const ButtonPrimary = ({
     <button
       onClick={onClick}
       className={`${inverse && "flex-row-reverse"}  ${
-        bgColor ? "bg-" + bgColor : "bg-lime-600"
+        bgColor ? "bg-" + bgColor : "bg-primary"
       }  ${textColor ? "text-" + textColor : "text-white"} 
       ${textHover ? "hover:text-" + textHover : "hover:text-black"} ${
         bgHover ? "hover:bg-" + bgHover : "hover:bg-lime-300"
