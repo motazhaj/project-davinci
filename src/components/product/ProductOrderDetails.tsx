@@ -2,8 +2,19 @@ import { IoCart } from "react-icons/io5";
 import ButtonPrimary from "../shared/buttons/ButtonPrimary";
 import { FaRegHeart } from "react-icons/fa";
 import { productInterface } from "../../utility/productsUtils";
+import { useEffect, useState } from "react";
+import { addCartItem, cartItemInterface, getLocalCart, isItemInCart, removeCartItem } from "../../utility/cartUtils";
 
 const ProductOrderDetails = ({ product }: { product: productInterface }) => {
+  const [cartItems, setCartItems] = useState<cartItemInterface[] | []>(getLocalCart());
+  const [quantity, setQuantity] = useState(1);
+  const [isInCart, setIsInCart] = useState(false);
+
+  useEffect(() => {
+    setIsInCart(isItemInCart(cartItems, product.id));
+  }, [cartItems]);
+  console.log(cartItems);
+
   return (
     <div className="flex flex-col gap-4 w-1/2 p-8">
       <h1 className="text-3xl font-bold">{product.title}</h1>
@@ -16,12 +27,19 @@ const ProductOrderDetails = ({ product }: { product: productInterface }) => {
         <input
           className="bg-slate-200 rounded-lg p-2 text-center w-24 focus:outline outline-primary"
           type="number"
-          placeholder="1"
+          placeholder={quantity.toString()}
+          onChange={(e) => setQuantity(Number(e.target.value))}
           step={1}
         />
       </div>
       <div className="w-full flex gap-4 pt-10">
-        <ButtonPrimary title="Add to Cart" onClick={() => console.log("Add to Cart")}>
+        <ButtonPrimary
+          title={isInCart ? "Remove from cart" : "Add to cart"}
+          onClick={() => {
+            isInCart ? removeCartItem(product.id) : addCartItem(product, quantity);
+            setCartItems(getLocalCart());
+          }}
+        >
           <IoCart size={24} />
         </ButtonPrimary>
 
