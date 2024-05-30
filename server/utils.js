@@ -3,7 +3,7 @@ const categories = require("./data/categories.json");
 
 const handleProducts = async (params) => {
   let { search, filter, sort, pageSize, pageNumber } = params;
-  pageSize = pageSize || 5;
+  pageSize = pageSize || 10;
   pageNumber = pageNumber || 1;
 
   let filteredResults = products;
@@ -37,11 +37,16 @@ const getNewArrivals = async () => {
   return sortItems(products, "newest").slice(0, 8);
 };
 
+const getFavourites = async (idList) => {
+  return products.filter((item) => idList.includes(item.id));
+};
+
 module.exports = {
   handleProducts,
   getCategories,
   getNewArrivals,
   getProductById,
+  getFavourites,
 };
 
 function searchItems(products, searchTerm) {
@@ -49,9 +54,7 @@ function searchItems(products, searchTerm) {
   const filteredItems = products.filter((item) => {
     const titleLower = item.title.toLowerCase();
     const categoryLower = item.category.toLowerCase();
-    return (
-      titleLower.includes(searchTermLower) || categoryLower.includes(searchTermLower)
-    );
+    return titleLower.includes(searchTermLower) || categoryLower.includes(searchTermLower);
   });
 
   return filteredItems;
