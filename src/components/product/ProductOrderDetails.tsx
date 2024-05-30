@@ -1,7 +1,7 @@
 import { IoCart } from "react-icons/io5";
 import ButtonPrimary from "../shared/buttons/ButtonPrimary";
 import { FaRegHeart } from "react-icons/fa";
-import { productInterface } from "../../utility/productsUtils";
+import { formatNumber, productInterface } from "../../utility/productsUtils";
 import { useEffect, useState } from "react";
 import {
   addCartItem,
@@ -36,7 +36,7 @@ const ProductOrderDetails = ({ product }: { product: productInterface }) => {
       <h1 className="text-3xl font-bold">{product.title}</h1>
       <p className="text-gray-400">{product.category}</p>
       <p className="h-32 overflow-auto">{product.description}</p>
-      <p className="text-4xl font-bold">₪ {product.price}</p>
+      <p className="text-4xl font-bold">₪ {formatNumber(product.price)}</p>
       <hr />
       <div className="flex gap-8 items-center">
         <p className="text-xl font-semibold">Quantity</p>

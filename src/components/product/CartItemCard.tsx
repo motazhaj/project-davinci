@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { cartItemInterface } from "../../utility/cartUtils";
+import { formatNumber } from "../../utility/productsUtils";
 
 const CartItemCard = ({ cartItem }: { cartItem: cartItemInterface }) => {
   return (
@@ -8,9 +9,9 @@ const CartItemCard = ({ cartItem }: { cartItem: cartItemInterface }) => {
       <div className="flex flex-col">
         <h2 className="truncate font-bold">{cartItem.title}</h2>
         <p className="text-gray-400">{cartItem.category}</p>
-        <p>${cartItem.price}</p>
+        <p>${formatNumber(cartItem.price)}</p>
         <p>Qnt {cartItem.quantity}</p>
-        <p>Total Price ${cartItem.totalPrice}</p>
+        <p>Total Price ${formatNumber(cartItem.totalPrice)}</p>
       </div>
     </Link>
   );
