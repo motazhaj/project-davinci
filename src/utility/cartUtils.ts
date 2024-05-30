@@ -37,7 +37,14 @@ export function getItemQuantity(id: number) {
 
 export function setItemQuantity(id: number, quantity: number) {
   const cart = getLocalCart();
-  setLocalCart(cart.map((item: cartItemInterface) => (item.id === id ? { ...item, quantity: quantity } : item)));
+  if (quantity < 1) {
+    quantity = 1;
+  }
+  setLocalCart(
+    cart.map((item: cartItemInterface) =>
+      item.id === id ? { ...item, quantity: quantity, totalPrice: quantity * item.price } : item
+    )
+  );
 }
 
 export function removeCartItem(id: number) {
