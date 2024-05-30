@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { cartItemInterface, getLocalCart, removeCartItem } from "../utility/cartUtils";
+import { cartItemInterface, getLocalCart, removeCartItem, setItemQuantity } from "../utility/cartUtils";
 import CartItemCard from "../components/product/CartItemCard";
 import NavSpacer from "../components/layout/NavSpacer";
 
@@ -17,6 +17,17 @@ const Cart = () => {
             <li key={item.id} className="w-full flex justify-between border-b py-4">
               <CartItemCard cartItem={item} />
               <div>
+                <p>Quantity</p>
+                <input
+                  className="bg-slate-200 rounded-lg p-2 text-center w-24 focus:outline outline-primary"
+                  type="number"
+                  value={item.quantity}
+                  onChange={(e) => {
+                    setItemQuantity(item.id, Number(e.target.value));
+                    setCartItems(getLocalCart());
+                  }}
+                  step={1}
+                />
                 <button
                   className="bg-red-500 text-white px-4 py-2 rounded-lg"
                   onClick={() => {
