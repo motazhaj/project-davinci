@@ -1,10 +1,14 @@
-import { FaRegHeart } from "react-icons/fa";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { productInterface } from "../../utility/productsUtils";
+import { formatNumber, productInterface } from "../../utility/productsUtils";
 import HoverHighlight from "../shared/HoverHighlight";
+import { addFavourite, isFavourite, removeFavourite } from "../../utility/favouritesUtils";
+import { useState } from "react";
 
 const ProductCard = ({ product }: { product: productInterface }) => {
   const { id, title, category, price, image } = product;
+  const [favourite, setFavourite] = useState(isFavourite(id));
+
   return (
     <li className="min-w-[240px] min-h-[340px]">
       <div className="w-full h-full flex flex-col gap-2">
@@ -19,12 +23,28 @@ const ProductCard = ({ product }: { product: productInterface }) => {
         <div className="flex flex-col gap-2">
           <div className="flex justify-between items-end">
             <h2 className="truncate">{title}</h2>
-            <button>
-              <FaRegHeart className="text-xl" />
-            </button>
+            {!favourite ? (
+              <button
+                onClick={() => {
+                  addFavourite(id);
+                  setFavourite(true);
+                }}
+              >
+                <FaRegHeart className="text-xl" />
+              </button>
+            ) : (
+              <button
+                onClick={() => {
+                  removeFavourite(id);
+                  setFavourite(false);
+                }}
+              >
+                <FaHeart className="text-xl text-red-500" />
+              </button>
+            )}
           </div>
           {category && <p className="truncate text-gray-400">{category}</p>}
-          {price && <p>₪ {price}</p>}
+          {price && <p>₪{formatNumber(price)}</p>}
         </div>
       </div>
     </li>

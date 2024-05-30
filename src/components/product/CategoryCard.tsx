@@ -8,7 +8,7 @@ export interface categoryInterface {
   image?: string;
 }
 
-const ProductCard = ({ category }: { category: categoryInterface }) => {
+const CategoryCard = ({ category }: { category: categoryInterface }) => {
   const { slug, image } = category;
   return (
     <li className="min-w-[230px] h-[240px] overflow-hidden relative rounded-xl ">
@@ -28,4 +28,4 @@ const ProductCard = ({ category }: { category: categoryInterface }) => {
   );
 };
 
-export default ProductCard;
+export default CategoryCard;

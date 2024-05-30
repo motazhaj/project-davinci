@@ -9,7 +9,12 @@ export default {
       lg: "1280px",
       xl: "1440px",
     },
-    extend: {},
+
+    extend: {
+      colors: {
+        primary: "#65a30d",
+      },
+    },
   },
   plugins: [],
 };

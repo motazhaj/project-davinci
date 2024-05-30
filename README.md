@@ -51,7 +51,7 @@ Products page
 ## Week 5
 
 ```
-- Favourites
-- Cart
+- Favourites ✅
+- Cart Logic ✅
 - Refactor Products details ✅
 ```
