@@ -1,11 +1,11 @@
-import { productCardProps } from "../../utility/productsUtils";
+import { productInterface } from "../../utility/productsUtils";
 import ProductCard from "../product/ProductCard";
 import { useEffect, useState } from "react";
 import LoadingSpinner from "../shared/LoadingSpinner";
 
 const NewArrivals = () => {
   const [loading, setLoading] = useState(true);
-  const [newArrivals, setNewArrivals] = useState<productCardProps[] | []>([]);
+  const [newArrivals, setNewArrivals] = useState<productInterface[] | []>([]);
 
   useEffect(() => {
     setLoading(false);
