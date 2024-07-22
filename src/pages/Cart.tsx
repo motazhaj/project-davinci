@@ -40,7 +40,7 @@ const Cart = () => {
             <div className="flex flex-col gap-4 w-1/6 mt-8 ml-auto">
               <p>Sub Total: ${formatNumber(getInvoice())}</p>
               <Link to="/products">
-                <ButtonPrimary title="Continue Shoping" />
+                <ButtonPrimary title="Continue Shopping" />
               </Link>
               <Link to="/checkout">
                 <ButtonPrimary title="Checkout" />
